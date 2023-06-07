@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DropzoneController;
 use App\Http\Controllers\EmpController;
 use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
@@ -37,3 +38,7 @@ Route::get('/download-pdf', [EmpController::class, 'downloadPDF']);
 Route::get('/import-form', [EmployeeController::class, 'importForm']);
 
 Route::post('/import', [EmployeeController::class, 'import'])->name('employee.import');
+
+Route::get('/dropzone', [DropzoneController::class, 'dropzone']);
+
+Route::post('/dropzone-store', [DropzoneController::class, 'dropzoneStore'])->name('dropzone.store');
