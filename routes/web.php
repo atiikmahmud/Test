@@ -33,3 +33,7 @@ Route::get('/export-csv', [EmployeeController::class, 'exportIntoCSV']);
 Route::get('/get-all-employee', [EmpController::class, 'getAllEmployee']);
 
 Route::get('/download-pdf', [EmpController::class, 'downloadPDF']);
+
+Route::get('/import-form', [EmployeeController::class, 'importForm']);
+
+Route::post('/import', [EmployeeController::class, 'import'])->name('employee.import');
