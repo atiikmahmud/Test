@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmpController;
 use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
 use App\PaymentGateway\Payment;
@@ -28,3 +29,7 @@ Route::get('/employee', [EmployeeController::class, 'index']);
 Route::get('/export-excel', [EmployeeController::class, 'exportIntoExcel']);
 
 Route::get('/export-csv', [EmployeeController::class, 'exportIntoCSV']);
+
+Route::get('/get-all-employee', [EmpController::class, 'getAllEmployee']);
+
+Route::get('/download-pdf', [EmpController::class, 'downloadPDF']);

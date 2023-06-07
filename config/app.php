@@ -164,6 +164,7 @@ return [
         App\Providers\PaymentServiceProvider::class,
         \Yajra\DataTables\DataTablesServiceProvider::class,
         \Maatwebsite\Excel\ExcelServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -235,6 +236,7 @@ return [
         'Payment' => App\PaymentGateway\PaymentFacade::class,
         'Datatables' => \Yajra\DataTables\Facades\DataTables::class,
         'Excel' => \Maatwebsite\Excel\Facades\Excel::class,
+        'PDF' => \Barryvdh\DomPDF\Facade::class,
     ],
 
 ];
