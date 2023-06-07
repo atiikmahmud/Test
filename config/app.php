@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         App\Providers\PaymentServiceProvider::class,
         \Yajra\DataTables\DataTablesServiceProvider::class,
+        \Maatwebsite\Excel\ExcelServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -233,6 +234,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Payment' => App\PaymentGateway\PaymentFacade::class,
         'Datatables' => \Yajra\DataTables\Facades\DataTables::class,
+        'Excel' => \Maatwebsite\Excel\Facades\Excel::class,
     ],
 
 ];

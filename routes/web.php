@@ -24,3 +24,7 @@ Route::get('/payment', function(){
 });
 
 Route::get('/employee', [EmployeeController::class, 'index']);
+
+Route::get('/export-excel', [EmployeeController::class, 'exportIntoExcel']);
+
+Route::get('/export-csv', [EmployeeController::class, 'exportIntoCSV']);
